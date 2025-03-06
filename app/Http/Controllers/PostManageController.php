@@ -46,9 +46,6 @@ class PostManageController extends Controller
         if ($request->hasFile('eyecatch')) {
             // 第1引数は、格納するフォルダ名
             // 第2引数は、使用するディスク名
-            // 生成されたファイル名がパス（フォルダ名）付きで返ってくるので、
-            // それをそのまま DB に保存する。
-            // 例） posts/vp7r9fefeujse6ifd18KdS.png
             $data['eyecatch'] = $request->file('eyecatch')->store('posts', 'public');
         }
 
